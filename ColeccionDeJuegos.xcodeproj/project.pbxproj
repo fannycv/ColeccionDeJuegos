@@ -14,6 +14,7 @@
 		D71301A82AE821DD00EFC383 /* ColeccionDeJuegos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D71301A62AE821DD00EFC383 /* ColeccionDeJuegos.xcdatamodeld */; };
 		D71301AA2AE821DF00EFC383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71301A92AE821DF00EFC383 /* Assets.xcassets */; };
 		D71301AD2AE821DF00EFC383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71301AB2AE821DF00EFC383 /* LaunchScreen.storyboard */; };
+		D71301B52AE8642D00EFC383 /* JuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71301B42AE8642D00EFC383 /* JuegosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D71301A92AE821DF00EFC383 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D71301AC2AE821DF00EFC383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D71301AE2AE821DF00EFC383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D71301B42AE8642D00EFC383 /* JuegosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				D71301AB2AE821DF00EFC383 /* LaunchScreen.storyboard */,
 				D71301AE2AE821DF00EFC383 /* Info.plist */,
 				D71301A62AE821DD00EFC383 /* ColeccionDeJuegos.xcdatamodeld */,
+				D71301B42AE8642D00EFC383 /* JuegosViewController.swift */,
 			);
 			path = ColeccionDeJuegos;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D71301B52AE8642D00EFC383 /* JuegosViewController.swift in Sources */,
 				D71301A22AE821DD00EFC383 /* ViewController.swift in Sources */,
 				D713019E2AE821DD00EFC383 /* AppDelegate.swift in Sources */,
 				D71301A02AE821DD00EFC383 /* SceneDelegate.swift in Sources */,
