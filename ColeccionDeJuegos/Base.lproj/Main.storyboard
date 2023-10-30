@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="U1v-HN-D4j">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CXx-bj-pUE">
                             <connections>
-                                <segue destination="f1q-vR-XRh" kind="show" id="O9h-IG-afR"/>
+                                <segue destination="f1q-vR-XRh" kind="show" identifier="juegoSegue" id="O9h-IG-afR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -60,29 +60,57 @@
                                     <constraint firstAttribute="width" constant="280" id="WzQ-nA-xHL"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Titulo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IH8-zC-ryU">
+                                <rect key="frame" x="84.666666666666686" y="305" width="224" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8P-23-G8K">
+                                <rect key="frame" x="30" y="359" width="333" height="18"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XK-ti-DLa">
-                                <rect key="frame" x="154" y="359" width="85" height="35"/>
+                                <rect key="frame" x="20" y="520" width="353" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Agregar"/>
                                 <connections>
                                     <action selector="agregarTapped:" destination="f1q-vR-XRh" eventType="touchUpInside" id="mw5-9n-dSL"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Titulo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IH8-zC-ryU">
-                                <rect key="frame" x="84.666666666666686" y="305" width="224" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <pickerView tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vM3-jW-qhS">
+                                <rect key="frame" x="80" y="411" width="240" height="103"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnc-yV-UhW">
+                                <rect key="frame" x="88" y="385" width="217" height="35"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.down.circle" catalog="system" imagePlacement="trailing" title="Seleccionar Categoria"/>
+                                <connections>
+                                    <action selector="mostrarPickerView:" destination="f1q-vR-XRh" eventType="touchUpInside" id="hmj-Ue-jaq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wdd-eB-Ary"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2XK-ti-DLa" firstAttribute="leading" secondItem="wdd-eB-Ary" secondAttribute="leading" constant="20" id="17V-27-xym"/>
+                            <constraint firstItem="2XK-ti-DLa" firstAttribute="top" secondItem="xnc-yV-UhW" secondAttribute="bottom" constant="100" id="BaJ-Gl-KHP"/>
+                            <constraint firstItem="g8P-23-G8K" firstAttribute="centerX" secondItem="wdd-eB-Ary" secondAttribute="centerX" id="Bhr-hP-0z7"/>
+                            <constraint firstItem="2XK-ti-DLa" firstAttribute="centerX" secondItem="wdd-eB-Ary" secondAttribute="centerX" id="Ipk-Px-OfH"/>
+                            <constraint firstItem="xnc-yV-UhW" firstAttribute="top" secondItem="IH8-zC-ryU" secondAttribute="bottom" constant="46" id="Mws-Vc-deg"/>
+                            <constraint firstItem="xnc-yV-UhW" firstAttribute="centerX" secondItem="wdd-eB-Ary" secondAttribute="centerX" id="Qns-MD-whz"/>
                             <constraint firstItem="L58-NW-Tmk" firstAttribute="top" secondItem="wdd-eB-Ary" secondAttribute="top" constant="32" id="RFU-gs-vAj"/>
+                            <constraint firstItem="g8P-23-G8K" firstAttribute="leading" secondItem="wdd-eB-Ary" secondAttribute="leading" constant="30" id="Ree-8l-sDL"/>
+                            <constraint firstItem="wdd-eB-Ary" firstAttribute="trailing" secondItem="2XK-ti-DLa" secondAttribute="trailing" constant="20" id="Uo3-Fb-4vp"/>
                             <constraint firstItem="IH8-zC-ryU" firstAttribute="top" secondItem="L58-NW-Tmk" secondAttribute="bottom" constant="20" id="VMA-iu-3aF"/>
-                            <constraint firstItem="2XK-ti-DLa" firstAttribute="centerX" secondItem="wdd-eB-Ary" secondAttribute="centerX" id="ZHC-Ei-YyA"/>
-                            <constraint firstItem="2XK-ti-DLa" firstAttribute="top" secondItem="IH8-zC-ryU" secondAttribute="bottom" constant="20" id="e9X-Hn-DrS"/>
+                            <constraint firstItem="g8P-23-G8K" firstAttribute="top" secondItem="IH8-zC-ryU" secondAttribute="bottom" constant="20" id="WY6-zS-tZo"/>
                             <constraint firstItem="L58-NW-Tmk" firstAttribute="centerX" secondItem="wdd-eB-Ary" secondAttribute="centerX" id="jRz-nH-qMd"/>
                             <constraint firstItem="L58-NW-Tmk" firstAttribute="width" secondItem="IH8-zC-ryU" secondAttribute="width" multiplier="1.25" id="lQi-0B-pAR"/>
+                            <constraint firstItem="wdd-eB-Ary" firstAttribute="trailing" secondItem="g8P-23-G8K" secondAttribute="trailing" constant="30" id="pHu-n1-HeJ"/>
                             <constraint firstItem="IH8-zC-ryU" firstAttribute="centerX" secondItem="wdd-eB-Ary" secondAttribute="centerX" id="vyk-E3-yMU"/>
                         </constraints>
                     </view>
@@ -102,7 +130,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ImageView" destination="L58-NW-Tmk" id="n9u-Pc-iwH"/>
+                        <outlet property="agregarActualizarBoton" destination="2XK-ti-DLa" id="bcm-Zm-YtZ"/>
+                        <outlet property="categoriaLabel" destination="g8P-23-G8K" id="Tnj-FP-a2q"/>
                         <outlet property="imageView" destination="L58-NW-Tmk" id="gta-Vw-DAt"/>
+                        <outlet property="pickerCategoria" destination="vM3-jW-qhS" id="8DQ-mU-6Oy"/>
                         <outlet property="tituloTextField" destination="IH8-zC-ryU" id="qFe-b5-C3J"/>
                     </connections>
                 </viewController>
@@ -130,8 +161,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.down.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
